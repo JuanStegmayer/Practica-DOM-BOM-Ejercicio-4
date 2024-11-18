@@ -1,5 +1,14 @@
 function mostrarFechaHora() {
   const fecha = new Date();
+  const diasSemana = [
+    "Domingo",
+    "Lunes",
+    "Martes",
+    "Miércoles",
+    "Jueves",
+    "Viernes",
+    "Sábado",
+  ];
   const meses = [
     "Ene",
     "Feb",
