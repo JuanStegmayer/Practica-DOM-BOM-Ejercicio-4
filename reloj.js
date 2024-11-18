@@ -1,6 +1,6 @@
 function mostrarFechaHora() {
   const fecha = new Date();
-  const diasSemana = [
+  const dias = [
     "Domingo",
     "Lunes",
     "Martes",
@@ -23,10 +23,9 @@ function mostrarFechaHora() {
     "Nov",
     "Dic",
   ];
-  const dia = fecha.getDate();
+  const dia = dias[fecha.getDate()];
   const mes = meses[fecha.getMonth()];
   const año = fecha.getFullYear();
-
   let horas = fecha.getHours();
   const minutos = fecha.getMinutes();
   const segundos = fecha.getSeconds();
@@ -38,7 +37,7 @@ function mostrarFechaHora() {
 
   const fechaHora = `${dia} de ${mes} de ${año} - ${horas}:${strMinutos}:${strSegundos} ${ampm}`;
   document.getElementById("fecha-hora").innerText = fechaHora;
-}
 
-mostrarFechaHora();
-setInterval(mostrarFechaHora, 1000);
+  mostrarFechaHora();
+  setInterval(mostrarFechaHora, 1000);
+}
